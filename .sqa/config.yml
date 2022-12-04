@@ -15,52 +15,52 @@ sqa_criteria:
     repos:
       github.com/abinit/abinit git:
         commands:
-        - /usr/bin/env sh .sqa/script.jumpy-persimmon-urchin.sh
-        container: qc.acc_nerdy-gold-squirrel
+        - /usr/bin/env sh .sqa/script.seedy-platinum-mist.sh
+        container: qc.acc_gimpy-bronze-goose
   QC.Doc:
     repos:
       github.com/abinit/abinit find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-vermilion-echidna.sh
-        container: qc.doc_chewy-olive-terrier
+        - /usr/bin/env sh .sqa/script.leaky-violet-hummingbird.sh
+        container: qc.doc_woolly-razzmatazz-dragonfly
       github.com/abinit/abinit git:
         commands:
-        - /usr/bin/env sh .sqa/script.pokey-teal-moose.sh
-        container: qc.doc_flabby-razzmatazz-tortoise
+        - /usr/bin/env sh .sqa/script.greasy-cream-bobcat.sh
+        container: qc.doc_crabby-heliotrope-camel
       github.com/abinit/abinit markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-champagne-squid.sh
-        container: qc.doc_randy-chartreuse-labradoodle
+        - /usr/bin/env sh .sqa/script.pretty-wheat-kiwi.sh
+        container: qc.doc_muggy-auburn-goat
       github.com/abinit/abinit restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.snoopy-malachite-dormouse.sh
-        container: qc.doc_wimpy-ivory-chameleon
+        - /usr/bin/env sh .sqa/script.shaggy-tan-spitz.sh
+        container: qc.doc_pretty-tomato-fly
   QC.Lic:
     repos:
       github.com/abinit/abinit licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.blurry-corn-buffalo.sh
-        container: qc.lic_randy-mustard-tiger
+        - /usr/bin/env sh .sqa/script.seedy-lilac-mist.sh
+        container: qc.lic_cheeky-persimmon-bracke
   QC.Sec:
     repos:
       github.com/abinit/abinit bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-crimson-drever.sh
-        container: qc.sec_crabby-ecru-quail
+        - /usr/bin/env sh .sqa/script.shabby-ecru-spitz.sh
+        container: qc.sec_muzzy-celadon-walrus
   QC.Sty:
     repos:
       github.com/abinit/abinit flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.pokey-pear-lobster.sh
-        container: qc.sty_blurry-orchid-markhor
+        - /usr/bin/env sh .sqa/script.surly-jade-dogfish.sh
+        container: qc.sty_bumpy-rose-salamander
       github.com/abinit/abinit jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-ecru-audemer.sh
-        container: qc.sty_seedy-wheat-spoonbill
+        - /usr/bin/env sh .sqa/script.scummy-ochre-moose.sh
+        container: qc.sty_smelly-ruby-akbash
   QC.Ver:
     repos:
       github.com/abinit/abinit get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.snippy-copper-mule.sh
-        container: qc.ver_lumpy-eggplant-worm
+        - /usr/bin/env sh .sqa/script.shaggy-amethyst-civet.sh
+        container: qc.ver_muggy-champagne-beetle
 timeout: 1800
