@@ -1,0 +1,66 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.7
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/abinit/abinit:
+      branch: master
+      repo: https://github.com/abinit/abinit
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/abinit/abinit git:
+        commands:
+        - /usr/bin/env sh .sqa/script.jumpy-persimmon-urchin.sh
+        container: qc.acc_nerdy-gold-squirrel
+  QC.Doc:
+    repos:
+      github.com/abinit/abinit find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.ready-vermilion-echidna.sh
+        container: qc.doc_chewy-olive-terrier
+      github.com/abinit/abinit git:
+        commands:
+        - /usr/bin/env sh .sqa/script.pokey-teal-moose.sh
+        container: qc.doc_flabby-razzmatazz-tortoise
+      github.com/abinit/abinit markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.snappy-champagne-squid.sh
+        container: qc.doc_randy-chartreuse-labradoodle
+      github.com/abinit/abinit restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.snoopy-malachite-dormouse.sh
+        container: qc.doc_wimpy-ivory-chameleon
+  QC.Lic:
+    repos:
+      github.com/abinit/abinit licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.blurry-corn-buffalo.sh
+        container: qc.lic_randy-mustard-tiger
+  QC.Sec:
+    repos:
+      github.com/abinit/abinit bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.flimsy-crimson-drever.sh
+        container: qc.sec_crabby-ecru-quail
+  QC.Sty:
+    repos:
+      github.com/abinit/abinit flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.pokey-pear-lobster.sh
+        container: qc.sty_blurry-orchid-markhor
+      github.com/abinit/abinit jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.ready-ecru-audemer.sh
+        container: qc.sty_seedy-wheat-spoonbill
+  QC.Ver:
+    repos:
+      github.com/abinit/abinit get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.snippy-copper-mule.sh
+        container: qc.ver_lumpy-eggplant-worm
+timeout: 1800
